@@ -20,37 +20,31 @@ local ESPTab = Window:CreateTab("ESP")
 ESPTab:CreateSection("Основные настройки ESP")
 
 ESPTab:CreateToggle({
-   Name = "Включить ESP",
+   Name = "turn ESP",
    CurrentValue = false,
    Flag = "ESP_Enabled"
 })
 
 ESPTab:CreateToggle({
-   Name = "Проверка команды (только враги)",
-   CurrentValue = true,
-   Flag = "TeamCheck"
-})
-
-ESPTab:CreateToggle({
-   Name = "Коробка (Box)",
+   Name = "Box esp",
    CurrentValue = true,
    Flag = "BoxESP"
 })
 
 ESPTab:CreateToggle({
-   Name = "Имя + дистанция",
+   Name = "name esp",
    CurrentValue = true,
    Flag = "NameESP"
 })
 
 ESPTab:CreateToggle({
-   Name = "Трейсер (Tracer)",
+   Name = "Tracer esp",
    CurrentValue = false,
    Flag = "TracerESP"
 })
 
 ESPTab:CreateToggle({
-   Name = "Здоровье",
+   Name = "heal esp",
    CurrentValue = false,
    Flag = "HealthESP"
 })
@@ -60,10 +54,10 @@ ESPTab:CreateToggle({
 -- ────────────────────────────────────────────────────────────────
 local PlayerTab = Window:CreateTab("Игрок")
 
-PlayerTab:CreateSection("Движение")
+PlayerTab:CreateSection("speed")
 
 PlayerTab:CreateSlider({
-   Name = "Скорость ходьбы",
+   Name = "speed",
    Range = {16, 300},
    Increment = 1,
    CurrentValue = 16,
@@ -71,7 +65,7 @@ PlayerTab:CreateSlider({
 })
 
 PlayerTab:CreateSlider({
-   Name = "Сила прыжка",
+   Name = "JumpPower",
    Range = {50, 300},
    Increment = 1,
    CurrentValue = 50,
@@ -79,7 +73,7 @@ PlayerTab:CreateSlider({
 })
 
 PlayerTab:CreateToggle({
-   Name = "Бесконечный прыжок",
+   Name = "InfiniteJump",
    CurrentValue = false,
    Flag = "InfiniteJump"
 })
@@ -94,37 +88,6 @@ PlayerTab:CreateSection("Дополнительно")
 
 PlayerTab:CreateButton({
    Name = "Сбросить скорость/прыжок",
-   Callback = function() end
-})
-
--- ────────────────────────────────────────────────────────────────
--- Вкладка Прочее / Утилиты
--- ────────────────────────────────────────────────────────────────
-local MiscTab = Window:CreateTab("Прочее")
-
-MiscTab:CreateSection("Оптимизация")
-
-MiscTab:CreateToggle({
-   Name = "Максимальный FPS Boost",
-   CurrentValue = false,
-   Flag = "FPSBoost"
-})
-
-MiscTab:CreateToggle({
-   Name = "Убрать туман",
-   CurrentValue = false,
-   Flag = "NoFog"
-})
-
-MiscTab:CreateSection("Телепорт / Сервер")
-
-MiscTab:CreateButton({
-   Name = "Переподключиться к серверу",
-   Callback = function() end
-})
-
-MiscTab:CreateButton({
-   Name = "Выйти в лобби",
    Callback = function() end
 })
 
